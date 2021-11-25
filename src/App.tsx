@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
 import Users from './pages/Users';
 import UserInfo from './pages/UserInfo';
 import Posts from './pages/Posts';
@@ -12,13 +11,12 @@ const App = () => (
   <div className="App">
     <header>
       <nav>
-        <Link to="/">Home</Link>
         <Link to="/users">Users</Link>
         <Link to="/posts">Posts</Link>
       </nav>
     </header>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Users />} />
       <Route path="/users" element={<Users />} />
       <Route path="/users/:id" element={<UserInfo />} />
       <Route path="/posts" element={<Posts />} />
